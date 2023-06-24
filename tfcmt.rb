@@ -6,21 +6,21 @@ class Tfcmt < Formula
   desc "Fork of mercari/tfnotify. tfcmt enhances tfnotify in many ways, including Terraform >= v0.15 support and advanced formatting options
 "
   homepage "https://github.com/suzuki-shunsuke/tfcmt"
-  version "4.4.1"
+  version "4.4.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.4.1/tfcmt_darwin_arm64.tar.gz"
-      sha256 "13a9e258419326d907f632f6e262e88ecf09d7f59e9b2449a481dd7136506ede"
+    if Hardware::CPU.intel?
+      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.4.2/tfcmt_darwin_amd64.tar.gz"
+      sha256 "40aebd00ff36421793ddd3a7d2b80d1656fa2df85f1aee5413f2b2afaefb1b77"
 
       def install
         bin.install "tfcmt"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.4.1/tfcmt_darwin_amd64.tar.gz"
-      sha256 "f5dea41c5f3ca8435499800dabccc8e831911b723f4b6ab0e8787efe4281097d"
+    if Hardware::CPU.arm?
+      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.4.2/tfcmt_darwin_arm64.tar.gz"
+      sha256 "5d8c8b7b651448e920dada7f0d58f6445fd77bbfe98050acc47a510d268c858c"
 
       def install
         bin.install "tfcmt"
@@ -30,16 +30,16 @@ class Tfcmt < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.4.1/tfcmt_linux_arm64.tar.gz"
-      sha256 "ea2f7f88ff6642022230daf088494915fe685356639bae4f8a0ce6a8b372c5e1"
+      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.4.2/tfcmt_linux_arm64.tar.gz"
+      sha256 "2da83d503ae51c792186ddca532aaa57d65567f792f88ab440ce94773919577f"
 
       def install
         bin.install "tfcmt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.4.1/tfcmt_linux_amd64.tar.gz"
-      sha256 "85d643f61b06d2a453d7e7762d64734b70291bffbaf49ea1b59dfbb620997f35"
+      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.4.2/tfcmt_linux_amd64.tar.gz"
+      sha256 "96b21634c9d4b833a1701590b2ca97ca84f0b051e7ac35ec25c658addcf1a9df"
 
       def install
         bin.install "tfcmt"
