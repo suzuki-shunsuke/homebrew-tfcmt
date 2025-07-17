@@ -3,7 +3,7 @@ cask "tfcmt" do
   desc "Fork of mercari/tfnotify. tfcmt enhances tfnotify in many ways, including Terraform >= v0.15 support and advanced formatting options
 "
   homepage "https://github.com/suzuki-shunsuke/tfcmt"
-  version "4.14.8"
+  version "4.14.9"
 
   livecheck do
     skip "Auto-generated on release."
@@ -13,23 +13,29 @@ cask "tfcmt" do
 
   on_macos do
     on_intel do
-      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.14.8/tfcmt_darwin_amd64.tar.gz"
-      sha256 "b147c81ad78d0e2ffe804638bc33ed19e9313971329383489637803e686abcd7"
+      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.14.9/tfcmt_darwin_amd64.tar.gz"
+      sha256 "feceeab5bdf71473ce579b76f24fb81675d88a0280fbf8433363f3e5a9fed8e4"
     end
     on_arm do
-      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.14.8/tfcmt_darwin_arm64.tar.gz"
-      sha256 "db5f56f254d91485c9c51c052dd8fc9393b9c1d9120a2b95806b2b6c74ca235f"
+      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.14.9/tfcmt_darwin_arm64.tar.gz"
+      sha256 "58c8aaf64b1fc05647c49ff7821c1e31989e69813ef17026aa74dc02a6f0dfd3"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.14.8/tfcmt_linux_amd64.tar.gz"
-      sha256 "96d902642d6855cce9bb63e027a45da406fb73f71dff2fd6279849e669cecdf6"
+      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.14.9/tfcmt_linux_amd64.tar.gz"
+      sha256 "4064afd20d85719a2fb2b46c76c267da8bc18f3b2914dd89a92b725d1a67e178"
     end
     on_arm do
-      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.14.8/tfcmt_linux_arm64.tar.gz"
-      sha256 "fb5a2a70f84c7ac2bf783587ad863a351435a81317a2a184e0d4d1a7e8dc0146"
+      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.14.9/tfcmt_linux_arm64.tar.gz"
+      sha256 "bbf75099740e6efd0ad0151c297abbceac9bdd2b919db2b577f0f5d843460092"
+    end
+  end
+
+  postflight do
+    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/tfcmt"]
     end
   end
 
