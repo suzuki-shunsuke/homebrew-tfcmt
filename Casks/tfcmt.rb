@@ -3,7 +3,7 @@ cask "tfcmt" do
   desc "Fork of mercari/tfnotify. tfcmt enhances tfnotify in many ways, including Terraform >= v0.15 support and advanced formatting options
 "
   homepage "https://github.com/suzuki-shunsuke/tfcmt"
-  version "4.14.9"
+  version "4.14.10"
 
   livecheck do
     skip "Auto-generated on release."
@@ -13,23 +13,23 @@ cask "tfcmt" do
 
   on_macos do
     on_intel do
-      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.14.9/tfcmt_darwin_amd64.tar.gz"
-      sha256 "feceeab5bdf71473ce579b76f24fb81675d88a0280fbf8433363f3e5a9fed8e4"
+      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.14.10/tfcmt_darwin_amd64.tar.gz"
+      sha256 "4f1154e9ab93ae1bfbe293fdb7f30c15acec0b26b0948021ce1fe242e0780dd3"
     end
     on_arm do
-      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.14.9/tfcmt_darwin_arm64.tar.gz"
-      sha256 "58c8aaf64b1fc05647c49ff7821c1e31989e69813ef17026aa74dc02a6f0dfd3"
+      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.14.10/tfcmt_darwin_arm64.tar.gz"
+      sha256 "a5dbb526e669fab68bfea69210f6b336166d152a25dc643ff0520abf4e0e6c1f"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.14.9/tfcmt_linux_amd64.tar.gz"
-      sha256 "4064afd20d85719a2fb2b46c76c267da8bc18f3b2914dd89a92b725d1a67e178"
+      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.14.10/tfcmt_linux_amd64.tar.gz"
+      sha256 "3eac422478c90dc89225cfad47e24f21246ca43765461be1c1a412b6eb3db0a7"
     end
     on_arm do
-      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.14.9/tfcmt_linux_arm64.tar.gz"
-      sha256 "bbf75099740e6efd0ad0151c297abbceac9bdd2b919db2b577f0f5d843460092"
+      url "https://github.com/suzuki-shunsuke/tfcmt/releases/download/v4.14.10/tfcmt_linux_arm64.tar.gz"
+      sha256 "6a3595ceed81a532700be096856143e82b722163fd406787f1ef3d0c7a725dce"
     end
   end
 
